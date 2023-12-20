@@ -9,6 +9,7 @@ export default function Login() {
     const location = useLocation()
     const redirectPath = location.state?.path || '/'
 
+    // auth login before to previous page
     axios.defaults.withCredentials = true
     const auth = async (event) => {
         event.preventDefault();

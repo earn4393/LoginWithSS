@@ -5,6 +5,7 @@ import axios from "axios";
 const MenuBer = () => {
   const [login, setLogin] = useState(null)
 
+  // กดล๊อกเอ้าท์ให้ออกจากหน้านี้และลบ session
   const auth = async (event) => {
     axios.get('http://localhost:3001/logout')
       .then(res => {
@@ -17,6 +18,7 @@ const MenuBer = () => {
       .catch(err => console.log(err))
   };
 
+  // ถ้าล๊อกอินให้แสดงปุ่มล๊อกเอ้าท์
   axios.defaults.withCredentials = true
   useEffect(() => {
     axios.get('http://localhost:3001/read-session')

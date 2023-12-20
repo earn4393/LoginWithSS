@@ -6,6 +6,7 @@ const RequireAuth = ({ children }) => {
     const location = useLocation()
     const nevigate = useNavigate()
 
+    // check pages that are locked ? 
     axios.defaults.withCredentials = true
     useEffect(() => {
         axios.get('http://localhost:3001/read-session')
