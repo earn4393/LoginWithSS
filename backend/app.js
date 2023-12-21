@@ -65,7 +65,6 @@ app.get('/auth', auth, (req, res) => {
         req.session.username = 'admin'
         res.send({ state: 'admin' })
     } else {
-        req.session.username = 'user'
         res.send({ state: 'user' })
     }
 });
